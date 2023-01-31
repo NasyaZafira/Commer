@@ -10,7 +10,7 @@ import com.commer.app.BuildConfig
 import com.commer.app.ui.BottomSheetError
 import com.commer.app.ui.CustomLoadingDialog
 
-abstract class BaseActivity:  AppCompatActivity() {
+abstract class BaseActivity : AppCompatActivity() {
 
     private var isAlertShow = false
     protected lateinit var loadingUI: CustomLoadingDialog
