@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemSuggestedPeople"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintUser"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnUnFollow">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgPeople"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:layout_marginBottom="@dimen/_24dp"
+            android:src="@drawable/img_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold"
+            android:maxLines="1"
+            android:text="@string/loading"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/icVerified"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/imgPeople"
+            app:layout_constraintTop_toTopOf="@id/imgPeople" />
+
+        <ImageView
+            android:id="@+id/icVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_2dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_verified"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtFullName"
+            app:layout_constraintTop_toTopOf="@id/txtFullName" />
+
+        <TextView
+            android:id="@+id/txtPeopleInterest"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_12dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:text="@string/loading"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imgPeople"
+            app:layout_constraintTop_toBottomOf="@id/txtFullName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_13dp"
+        android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/follow"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        app:cornerRadius="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="@id/constraintUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraintUser" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnUnFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_13dp"
+        android:backgroundTint="@color/primary_color"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/followed"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12sp"
+        android:visibility="invisible"
+        app:cornerRadius="@dimen/_8dp"
+        app:layout_constraintBottom_toBottomOf="@id/constraintUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/constraintUser"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

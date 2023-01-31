@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetFilter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icRectangle"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rounded_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/filter"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icRectangle" />
+
+        <TextView
+            android:id="@+id/txtFilterYourPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/filter_posts_by_topics"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/txtFilter"
+            app:layout_constraintTop_toBottomOf="@id/txtFilter" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipFilterPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/txtFilterYourPost"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ui_ux" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_assurance" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_end" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/front_end" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipFilterSimplerPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="30dp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/txtFilterYourPost"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Simpler.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ui_ux" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Simpler.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/android" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Simpler.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quality_assurance" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Simpler.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_end" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Simpler.Chip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/front_end" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="@color/login_button_selector"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/apply_filter"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipFilterSimplerPost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

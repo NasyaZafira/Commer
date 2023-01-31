@@ -1,0 +1,29 @@
+{
+  "data": {
+    "access_token": "test123",
+    "refresh_token": "test123",
+    "scope": "read write",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "user": {
+      "id": 1,
+      "username": "test@commit.com",
+      "phone_number": "01234567890",
+      "profile_pic": "",
+      "region": "WAKANDA",
+      "status": "King",
+      "passion": "Android",
+      "bio": "test",
+      "total_followers": 1,
+      "total_following": 1,
+      "is_follow": false,
+      "gender": "Male",
+      "fullname": "Hello Test",
+      "blocked": false,
+      "authorities": null
+    },
+    "jti": "test123"
+  },
+  "message": "sukses",
+  "status": "200"
+}

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetPostStatus"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icRectangle"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rounded_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtWhoCanSeeYou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/who_can_see_your_post"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icRectangle" />
+
+        <TextView
+            android:id="@+id/txtAddTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/choose_who_can_see_your_post"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/txtWhoCanSeeYou"
+            app:layout_constraintTop_toBottomOf="@id/txtWhoCanSeeYou" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPublicPost"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="20dp"
+            android:checkable="true"
+            app:cardBackgroundColor="@color/card_bg_color_at_post_status"
+            app:cardElevation="@dimen/_0dp"
+            app:cardForegroundColor="@color/card_fg_color_at_post_status"
+            app:checkedIconTint="@color/primary_color"
+            app:layout_constraintTop_toBottomOf="@id/txtAddTags"
+            app:rippleColor="@android:color/transparent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12dp"
+                android:layout_marginVertical="@dimen/_5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgPublicPost"
+                    android:layout_width="@dimen/_48dp"
+                    android:layout_height="@dimen/_48dp"
+                    android:src="@drawable/ic_public_post_blue"
+                    android:tint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtPublicPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/public_post"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintStart_toEndOf="@id/imgPublicPost"
+                    app:layout_constraintTop_toTopOf="@id/imgPublicPost" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/everyone_will_be_able"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/imgPublicPost"
+                    app:layout_constraintStart_toEndOf="@id/imgPublicPost" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSimplerPost"
+            style="@style/Widget.MaterialComponents.CardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:checkable="true"
+            app:cardBackgroundColor="@color/card_bg_color_at_post_status"
+            app:cardElevation="@dimen/_0dp"
+            app:cardForegroundColor="@color/card_fg_color_at_post_status"
+            app:checkedIconTint="@color/primary_color"
+            app:layout_constraintTop_toBottomOf="@id/cardPublicPost"
+            app:rippleColor="@android:color/transparent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_12dp"
+                android:layout_marginVertical="@dimen/_5dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgSimplerPost"
+                    android:layout_width="@dimen/_48dp"
+                    android:layout_height="@dimen/_48dp"
+                    android:src="@drawable/ic_simpler_blue"
+                    android:tint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtSimplerPost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/simpler_post"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_18sp"
+                    app:layout_constraintStart_toEndOf="@id/imgSimplerPost"
+                    app:layout_constraintTop_toTopOf="@id/imgSimplerPost" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/subscribers_only"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/imgSimplerPost"
+                    app:layout_constraintStart_toEndOf="@id/imgSimplerPost" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="@color/login_button_selector"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/post"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardSimplerPost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

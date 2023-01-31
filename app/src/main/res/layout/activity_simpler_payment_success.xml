@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.simpler.SimplerPaymentSuccessActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/success_payment" />
+
+    <ScrollView
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottiePaymentSuccess"
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="@dimen/_120dp"
+                android:layout_marginTop="@dimen/_44dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/success_payment" />
+
+            <TextView
+                android:id="@+id/txtPaymentSuccessful"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4dp"
+                android:fontFamily="@font/poppins_700"
+                android:text="@string/payment_successful"
+                android:textColor="@color/success"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lottiePaymentSuccess" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTransactionDetails"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_39dp"
+                app:cardCornerRadius="@dimen/_10dp"
+                app:cardElevation="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtPaymentSuccessful">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_16dp">
+
+                    <TextView
+                        android:id="@+id/txtTransactionDetails"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_700"
+                        android:text="@string/transaction_details"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtPlanDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/plan_details_caps"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtTransactionDetails" />
+
+                    <TextView
+                        android:id="@+id/txtMonthsPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/simpler_x_months_plan"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtPlanDetails" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/div1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:alpha="0.4"
+                        app:dividerColor="@color/text_secondary"
+                        app:layout_constraintTop_toBottomOf="@id/txtMonthsPlan" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/status"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div1" />
+
+                    <TextView
+                        android:id="@+id/txtStatusValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/success"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtStatus" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/div2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:alpha="0.4"
+                        app:dividerColor="@color/text_secondary"
+                        app:layout_constraintTop_toBottomOf="@id/txtStatusValue" />
+
+                    <TextView
+                        android:id="@+id/txtPaymentMethod"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/payment_method"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div2" />
+
+                    <TextView
+                        android:id="@+id/txtPaymentMethodValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/manual_bank_transfer"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtPaymentMethod" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/div3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:alpha="0.4"
+                        app:dividerColor="@color/text_secondary"
+                        app:layout_constraintTop_toBottomOf="@id/txtPaymentMethodValue" />
+
+                    <TextView
+                        android:id="@+id/txtTransactionDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/transaction_date"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div3" />
+
+                    <TextView
+                        android:id="@+id/txtTransactionDateValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:gravity="end"
+                        android:text="@string/transaction_date_value"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtTransactionDate" />
+
+                    <com.google.android.material.divider.MaterialDivider
+                        android:id="@+id/div4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_0_5dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:alpha="0.4"
+                        app:dividerColor="@color/text_secondary"
+                        app:layout_constraintTop_toBottomOf="@id/txtTransactionDateValue" />
+
+                    <TextView
+                        android:id="@+id/txtTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/total_amount_paid"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div4" />
+
+                    <TextView
+                        android:id="@+id/txtForXMonths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/for_x_months"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintStart_toStartOf="@id/txtTotal"
+                        app:layout_constraintTop_toBottomOf="@id/txtTotal" />
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_0dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/idr_x_000"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtTotal" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReloginNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="123dp"
+                android:fontFamily="@font/poppins_600"
+                android:insetTop="@dimen/_0dp"
+                android:insetBottom="@dimen/_0dp"
+                android:text="@string/re_log_in_to_access_simpler"
+                android:textAllCaps="false"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_14sp"
+                app:cornerRadius="@dimen/_8dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardTransactionDetails" />
+
+            <!--            <com.google.android.material.button.MaterialButton-->
+            <!--                android:id="@+id/btnReturnToHomepage"-->
+            <!--                android:layout_width="0dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginHorizontal="@dimen/_24dp"-->
+            <!--                android:layout_marginTop="@dimen/_10dp"-->
+            <!--                android:layout_marginBottom="@dimen/_48dp"-->
+            <!--                android:fontFamily="@font/poppins_600"-->
+            <!--                android:text="@string/return_to_homepage"-->
+            <!--                android:textAllCaps="false"-->
+            <!--                android:textColor="@color/bg_secondary"-->
+            <!--                android:textSize="@dimen/_14sp"-->
+            <!--                app:cornerRadius="@dimen/_8dp"-->
+            <!--                app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/btnReloginNow"-->
+            <!--                app:layout_goneMarginBottom="@dimen/_48dp" />-->
+
+            <TextView
+                android:id="@+id/btnReturnToHomepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_48dp"
+                android:layout_marginBottom="@dimen/_48dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/return_to_homepage"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnReloginNow" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

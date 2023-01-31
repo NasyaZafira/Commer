@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.post.newpost.NewPostActivity">
+
+    <LinearLayout
+        android:id="@+id/linearNewPost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/_31dp"
+        android:paddingVertical="21dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imgBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_29dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/new_post"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginBottom="@dimen/_12dp"
+        app:layout_constraintBottom_toTopOf="@id/txtMaxCount"
+        app:layout_constraintTop_toBottomOf="@id/linearNewPost">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTxtPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/poppins"
+                android:hint="@string/write_something"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:maxLength="1000"
+                android:paddingHorizontal="@dimen/_31dp"
+                android:paddingVertical="@dimen/_25dp"
+                android:textColor="@color/text_primary"
+                android:textColorHighlight="@color/blue_transparent"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="LabelFor" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txtClearMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:fontFamily="@font/poppins_600"
+        android:text="@string/clear_all_media"
+        android:textColor="@color/primary_color"
+        android:textSize="@dimen/_12sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/recyclerFiles"
+        app:layout_constraintStart_toStartOf="@id/recyclerFiles" />
+
+    <TextView
+        android:id="@+id/txtCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/_0"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toStartOf="@id/txtMaxCount"
+        app:layout_constraintTop_toTopOf="@id/txtMaxCount" />
+
+    <TextView
+        android:id="@+id/txtMaxCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:fontFamily="@font/poppins"
+        android:text="/1000"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintBottom_toTopOf="@id/recyclerFiles"
+        app:layout_constraintEnd_toEndOf="@id/btnPost" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFiles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/icRectangle"
+        tools:itemCount="5"
+        tools:listitem="@layout/item_files_at_new_post" />
+
+    <ImageView
+        android:id="@+id/icRectangle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:layout_marginBottom="@dimen/_16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/line_at_new_post"
+        app:layout_constraintBottom_toTopOf="@id/btnPost" />
+
+    <ImageButton
+        android:id="@+id/imgBtnMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_31dp"
+        android:background="@color/white"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_photograph"
+        app:layout_constraintBottom_toBottomOf="@id/btnPost"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnPost" />
+
+    <ImageButton
+        android:id="@+id/imgBtnVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25dp"
+        android:background="@color/white"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_video"
+        app:layout_constraintBottom_toBottomOf="@id/btnPost"
+        app:layout_constraintStart_toEndOf="@id/imgBtnMedia"
+        app:layout_constraintTop_toTopOf="@id/btnPost" />
+
+    <ImageButton
+        android:id="@+id/imgBtnTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25dp"
+        android:background="@color/white"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_topics"
+        app:layout_constraintBottom_toBottomOf="@id/btnPost"
+        app:layout_constraintStart_toEndOf="@id/imgBtnVideo"
+        app:layout_constraintTop_toTopOf="@id/btnPost" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_16dp"
+        android:layout_marginEnd="@dimen/_31dp"
+        android:enabled="false"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/post"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14sp"
+        app:backgroundTint="@color/login_button_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

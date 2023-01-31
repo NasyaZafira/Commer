@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_transparent"
+    tools:context=".ui.search.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/linearSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:paddingVertical="@dimen/_18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_8dp">
+
+            <ImageButton
+                android:id="@+id/imgBtnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/_5dp"
+                android:backgroundTint="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_back" />
+
+            <EditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_55dp"
+                android:backgroundTint="@android:color/transparent"
+                android:fontFamily="@font/poppins_semibold"
+                android:imeOptions="actionSearch"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingVertical="@dimen/_10dp"
+                android:textColor="@color/text_primary"
+                android:textColorHighlight="@color/blue_transparent"
+                android:textSize="@dimen/_14sp"
+                tools:ignore="LabelFor" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linearSearch">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/linearTxtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_32dp"
+                android:orientation="horizontal"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/txtSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/search_result_for"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/_14sp" />
+
+                <TextView
+                    android:id="@+id/txtSearchResult"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/secondary"
+                    android:textSize="@dimen/_14sp" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginBottom="@dimen/_24dp"
+                android:background="@drawable/rounded_dialog"
+                android:backgroundTint="@color/white"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearTxtSearch"
+                tools:listitem="@layout/item_suggested_people" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

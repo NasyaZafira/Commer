@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/_24dp"
+    android:layout_marginBottom="@dimen/_12dp"
+    android:background="@drawable/rounded_dialog"
+    android:backgroundTint="@color/white">
+
+    <TextView
+        android:id="@+id/txtSimpler"
+        style="@style/Transaction.Text.Title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:text="@string/loading"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        style="@style/Transaction.Text.Paragraph"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_16dp"
+        android:text="@string/loading"
+        app:layout_constraintTop_toBottomOf="@id/txtSimpler" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        style="@style/Transaction.Text.Paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:text="@string/status"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/txtSimpler"
+        app:layout_constraintTop_toBottomOf="@id/txtDate" />
+
+    <TextView
+        android:id="@+id/txtStatusTransaction"
+        style="@style/Transaction.Text.Paragraph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:text="@string/loading"
+        android:textColor="@color/primary_color"
+        app:layout_constraintStart_toEndOf="@id/txtStatus"
+        app:layout_constraintTop_toTopOf="@id/txtStatus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

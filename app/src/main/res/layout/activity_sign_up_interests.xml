@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:theme="@style/Theme.Commit.SignUp"
+    tools:context=".ui.register.SignUpInterestsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtChooseInterests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="77dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/choose_your_interests"
+            android:textColor="@color/text_primary"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtOneMoreStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/one_more_step"
+            android:textColor="@color/text_primary"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChooseInterests" />
+
+        <ImageView
+            android:id="@+id/imgChooseInterest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtOneMoreStep"
+            app:srcCompat="@drawable/img_choose_interest" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipsInterests"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgChooseInterest">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipUIorUX"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layoutDirection="rtl"
+                android:text="@string/ui_ux"
+                android:textAppearance="@style/ChipStyle"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_bg_states"
+                app:chipCornerRadius="30dp"
+                app:chipIcon="@drawable/chip_icon_states"
+                app:chipIconVisible="true"
+                app:chipStartPadding="15dp"
+                app:chipStrokeColor="@color/chip_bg_states"
+                app:textEndPadding="15dp"
+                app:textStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFrontEnd"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layoutDirection="rtl"
+                android:text="@string/front_end"
+                android:textAppearance="@style/ChipStyle"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_bg_states"
+                app:chipCornerRadius="30dp"
+                app:chipIcon="@drawable/chip_icon_states"
+                app:chipIconVisible="true"
+                app:chipStartPadding="15dp"
+                app:chipStrokeColor="@color/chip_bg_states"
+                app:textEndPadding="15dp"
+                app:textStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBackEnd"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layoutDirection="rtl"
+                android:text="@string/back_end"
+                android:textAppearance="@style/ChipStyle"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_bg_states"
+                app:chipCornerRadius="30dp"
+                app:chipIcon="@drawable/chip_icon_states"
+                app:chipIconVisible="true"
+                app:chipStartPadding="15dp"
+                app:chipStrokeColor="@color/chip_bg_states"
+                app:textEndPadding="15dp"
+                app:textStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAndroid"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layoutDirection="rtl"
+                android:text="@string/android"
+                android:textAppearance="@style/ChipStyle"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_bg_states"
+                app:chipCornerRadius="30dp"
+                app:chipIcon="@drawable/chip_icon_states"
+                app:chipIconVisible="true"
+                app:chipStartPadding="15dp"
+                app:chipStrokeColor="@color/chip_bg_states"
+                app:textEndPadding="15dp"
+                app:textStartPadding="12dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipQualityAssurance"
+                style="@style/Widget.Material3.Chip.Filter"
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:layoutDirection="rtl"
+                android:text="@string/quality_assurance"
+                android:textAppearance="@style/ChipStyle"
+                app:checkedIconVisible="false"
+                app:chipBackgroundColor="@color/chip_bg_states"
+                app:chipCornerRadius="30dp"
+                app:chipIcon="@drawable/chip_icon_states"
+                app:chipIconVisible="true"
+                app:chipStartPadding="15dp"
+                app:chipStrokeColor="@color/chip_bg_states"
+                app:textEndPadding="15dp"
+                app:textStartPadding="12dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="77dp"
+            android:backgroundTint="@color/login_button_selector"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_transparent"
+            android:textSize="18sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chipsInterests" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

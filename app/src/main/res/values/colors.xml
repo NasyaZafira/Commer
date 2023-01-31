@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">#00229B</color>
+    <color name="secondary_color">#7A97FF</color>
+    <color name="success_color">#10BD67</color>
+    <color name="error_color">#DA3D5A</color>
+    <color name="text_primary">#333333</color>
+    <color name="text_secondary">#A8A8A8</color>
+    <color name="link_color">#2F69FF</color>
+    <color name="blue_transparent">#E2EFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_15">#26000000</color>
+    <color name="primary">#00229B</color>
+    <color name="secondary">#7A97FF</color>
+    <color name="secondary_20percent">#327A97FF</color>
+
+    <color name="success">#10BD67</color>
+    <color name="error">#DA3D5A</color>
+    <color name="active">#2196F3</color>
+    <color name="text_link">#2F69FF</color>
+    <color name="status_notify">#FE9E00</color>
+
+    <color name="bg_primary">#E2EFFF</color>
+    <color name="bg_secondary">#FFFFFF</color>
+</resources>

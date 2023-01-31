@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.commer.app">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name="com.commer.app.CommerApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Commit">
+        <activity
+            android:name="com.commer.app.ui.simpler.SimplerPaymentSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.simpler.SimplerPaymentFailedActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.simplerpost.SimplerPostActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.transactions.TransactionHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.bookmarks.BookmarksActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.account.UpdateAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.contact.ContactUsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.profile.UpdateProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.settings.SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.post.editpost.EditPostActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.profile.other.ProfileOtherActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.profile.followers.FollowersActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.profile.following.FollowingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.report.ReportSuccessActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.report.ReportActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.post.detail.DetailPostActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.commer.app.ui.homepage.VideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:theme="@style/Style.Translucent" />
+        <activity
+            android:name="com.commer.app.ui.post.newpost.NewPostActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.search.SearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.simpler.SubscriptionPlanActivity"
+            android:exported="false"
+            android:label="@string/title_activity_subscription_plan"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.simpler.SimplerPaymentDetailsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.simpler.SimplerPaymentUploadActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home" />
+        <activity
+            android:name="com.commer.app.ui.simpler.SimplerPaymentLoadingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.resetpassword.activity.ResetPasswordSuccessActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.resetpassword.activity.ResetPasswordFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.resetpassword.activity.CodeVerifyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.resetpassword.activity.ResetPasswordActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.register.SignUpInterestsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp" />
+        <activity
+            android:name="com.commer.app.ui.register.SignUpFormActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.login.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.main.MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.Home"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.commer.app.ui.welcomepage.WelcomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Commit.SignUp.Form" />
+        <activity
+            android:name="com.commer.app.ui.main.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Commit.Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

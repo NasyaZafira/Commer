@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.welcomepage.screens.ThirdScreen">
+
+    <ImageView
+        android:id="@+id/imgWelcomePage"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_40dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/welcome_page_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtWelcomeTitle"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_86dp"
+        android:fontFamily="@font/poppins_700"
+        android:text="@string/welcomeTitle3"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgWelcomePage" />
+
+    <TextView
+        android:id="@+id/txtWelcomeDescription"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/welcomeDesc3"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_14sp"
+        app:layout_constraintEnd_toEndOf="@id/txtWelcomeTitle"
+        app:layout_constraintStart_toStartOf="@id/txtWelcomeTitle"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToSignup"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4dp"
+        android:backgroundTint="@color/primary"
+        android:fontFamily="@font/poppins_600"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="@dimen/_10dp"
+        android:text="@string/sign_up"
+        android:textAllCaps="false"
+        android:textColor="@color/blue_transparent"
+        android:textSize="@dimen/_18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toTopOf="@id/btnGoToLogin"
+        app:layout_constraintEnd_toEndOf="@id/txtWelcomeTitle"
+        app:layout_constraintStart_toStartOf="@id/txtWelcomeTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToLogin"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_79dp"
+        android:backgroundTint="@color/bg_secondary"
+        android:fontFamily="@font/poppins_600"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:padding="@dimen/_10dp"
+        android:text="@string/log_in"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:textSize="@dimen/_18sp"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/txtWelcomeTitle"
+        app:layout_constraintStart_toStartOf="@id/txtWelcomeTitle"
+        app:strokeColor="@color/primary"
+        app:strokeWidth="@dimen/_2dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.profile.UpdateProfileActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintTxtProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:paddingVertical="@dimen/_21dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imgBtnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_31dp"
+            android:background="@color/primary_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/profile"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/imgBtnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/imgBtnBack" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintTxtProfile">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintImgProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/_28dp"
+                    android:src="@drawable/img_user"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imgBtnGetPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/profile"
+                    android:src="@drawable/ic_edit_profile_photo"
+                    app:layout_constraintBottom_toBottomOf="@id/imgProfile"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="46dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/full_name"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintTop_toBottomOf="@id/constraintImgProfile" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputFullName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="5dp"
+                app:boxStrokeColor="@color/link_color"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/txtFullName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/enter_your_full_name_here"
+                    android:inputType="text"
+                    android:paddingVertical="9dp"
+                    android:paddingStart="@dimen/_10dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/_12sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtErrorHandlingFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins"
+                android:lineSpacingExtra="4sp"
+                android:text=""
+                android:textColor="@color/error"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/inputFullName" />
+
+            <TextView
+                android:id="@+id/txtBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_22dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/bio"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintTop_toBottomOf="@id/txtErrorHandlingFullName" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputBio"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="5dp"
+                app:boxStrokeColor="@color/link_color"
+                app:hintEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/txtBio">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:hint="@string/enter_your_bio_here"
+                    android:inputType="textMultiLine"
+                    android:maxLength="200"
+                    android:paddingVertical="9dp"
+                    android:paddingStart="@dimen/_10dp"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/_12sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/txtErrorHandlingBio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/poppins"
+                android:lineSpacingExtra="4sp"
+                android:text=""
+                android:textColor="@color/error"
+                android:textSize="12sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/inputBio" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@id/inputBio"
+                app:layout_constraintTop_toBottomOf="@id/txtErrorHandlingBio">
+
+                <TextView
+                    android:id="@+id/txtCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_12dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/_0"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintEnd_toStartOf="@id/txtMaxCount"
+                    app:layout_constraintTop_toTopOf="@id/txtMaxCount" />
+
+                <TextView
+                    android:id="@+id/txtMaxCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="/200"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/_12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_66dp"
+                android:layout_marginBottom="150dp"
+                android:backgroundTint="@color/login_button_selector"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="@string/save_changes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sp"
+                app:cornerRadius="5dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintCounter" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

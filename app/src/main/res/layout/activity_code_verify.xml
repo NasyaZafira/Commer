@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:theme="@style/Theme.Commit.SignUp.Form"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/imgBtnClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_25dp"
+            android:layout_marginTop="@dimen/_48dp"
+            android:background="@color/white"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtVerificationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_31dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/verification_code"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_28sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgBtnClose" />
+
+        <TextView
+            android:id="@+id/txtPleaseEnter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/please_enter_4_digit_code"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/txtVerificationCode"
+            app:layout_constraintTop_toBottomOf="@id/txtVerificationCode" />
+
+        <TextView
+            android:id="@+id/txtEmailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text=""
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/txtVerificationCode"
+            app:layout_constraintTop_toBottomOf="@id/txtPleaseEnter" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/pinViewCode"
+            style="@style/PinWidget.PinView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40dp"
+            android:cursorVisible="true"
+            android:fontFamily="@font/poppins_bold"
+            android:inputType="number"
+            android:itemBackground="@color/blue_transparent"
+            android:text=""
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_28sp"
+            app:cursorColor="@color/primary_color"
+            app:itemCount="4"
+            app:itemHeight="@dimen/_60dp"
+            app:itemRadius="@dimen/_4dp"
+            app:itemSpacing="@dimen/_13dp"
+            app:itemWidth="@dimen/_60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtEmailAddress"
+            app:lineColor="@color/blue_transparent"
+            app:viewType="rectangle" />
+
+        <TextView
+            android:id="@+id/txtResendCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text=""
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/_14sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pinViewCode" />
+
+        <TextView
+            android:id="@+id/txtResendCodeBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/resend_code"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_14sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pinViewCode" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_31dp"
+            android:layout_marginBottom="@dimen/_354dp"
+            android:backgroundTint="@color/login_button_selector"
+            android:enabled="false"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/next"
+            android:textAllCaps="false"
+            android:textColor="@color/blue_transparent"
+            android:textSize="@dimen/_18sp"
+            app:cornerRadius="@dimen/_5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtResendCode" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

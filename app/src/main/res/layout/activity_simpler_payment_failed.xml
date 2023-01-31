@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.simpler.SimplerPaymentFailedActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/failed_payment" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottiePaymentFailed"
+            android:layout_width="@dimen/_120dp"
+            android:layout_height="@dimen/_120dp"
+            android:layout_marginTop="224dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/failed_payment" />
+
+        <TextView
+            android:id="@+id/txtPaymentFailed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4dp"
+            android:fontFamily="@font/poppins_700"
+            android:text="@string/payment_failed"
+            android:textColor="@color/error_color"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintEnd_toEndOf="@id/lottiePaymentFailed"
+            app:layout_constraintStart_toStartOf="@id/lottiePaymentFailed"
+            app:layout_constraintTop_toBottomOf="@id/lottiePaymentFailed" />
+
+        <TextView
+            android:id="@+id/txtSorry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:fontFamily="@font/poppins_400"
+            android:gravity="center"
+            android:text="@string/sorry_something_went_wrong_"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="@id/lottiePaymentFailed"
+            app:layout_constraintStart_toStartOf="@id/lottiePaymentFailed"
+            app:layout_constraintTop_toBottomOf="@id/txtPaymentFailed" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCreateNewTransaction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginBottom="@dimen/_16dp"
+            android:fontFamily="@font/poppins_600"
+            android:insetTop="@dimen/_0dp"
+            android:insetBottom="@dimen/_0dp"
+            android:text="@string/create_new_transaction"
+            android:textAllCaps="false"
+            android:textColor="@color/bg_secondary"
+            android:textSize="@dimen/_14sp"
+            app:cornerRadius="@dimen/_8dp"
+            app:layout_constraintBottom_toTopOf="@id/btnReturnToHomepage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/btnReturnToHomepage"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginHorizontal="@dimen/_24dp"-->
+        <!--            android:layout_marginBottom="@dimen/_48dp"-->
+        <!--            android:fontFamily="@font/poppins_600"-->
+        <!--            android:text="@string/return_to_homepage"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:textColor="@color/bg_secondary"-->
+        <!--            android:insetTop="@dimen/_0dp"-->
+        <!--            android:insetBottom="@dimen/_0dp"-->
+        <!--            android:textSize="@dimen/_14sp"-->
+        <!--            app:cornerRadius="@dimen/_8dp"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <TextView
+            android:id="@+id/btnReturnToHomepage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_48dp"
+            android:fontFamily="@font/poppins_400"
+            android:text="@string/return_to_homepage"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

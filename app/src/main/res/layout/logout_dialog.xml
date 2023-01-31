@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:cardCornerRadius="@dimen/_8dp"
+    app:cardElevation="@dimen/_14dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_28dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/logout"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_28dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:fontFamily="@font/poppins"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/you_have_to_log_in_into_your_account_again"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintTop_toBottomOf="@id/txtLogout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_28dp"
+            android:layout_marginTop="@dimen/_32dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_10dp"
+            app:layout_constraintEnd_toEndOf="@id/txtLogout"
+            app:layout_constraintTop_toBottomOf="@id/txtDescription">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_0dp"
+                android:text="@string/cancel"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:rippleColor="@android:color/transparent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:padding="@dimen/_0dp"
+                android:text="@string/log_out"
+                android:textAlignment="textEnd"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_color"
+                android:textSize="@dimen/_14sp"
+                app:rippleColor="@android:color/transparent" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_simpler_subscribe_plan"
+    tools:context=".ui.simpler.SubscriptionPlanActivity">
+
+    <ImageView
+        android:id="@+id/imgArrowBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_26dp"
+        android:layout_marginTop="@dimen/_42dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue_transparent" />
+
+    <TextView
+        android:id="@+id/txtWelcomeToSimpler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_102dp"
+        android:fontFamily="@font/poppins_700"
+        android:gravity="center"
+        android:text="@string/welcome_to_simpler"
+        android:textColor="@color/blue_transparent"
+        android:textSize="@dimen/_24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtSimplerWillMake"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_40_5dp"
+        android:layout_marginTop="@dimen/_32dp"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/simpler_will_make_everything_simpler_for_you"
+        android:textColor="@color/blue_transparent"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtWelcomeToSimpler" />
+
+    <ImageView
+        android:id="@+id/imgBulb1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_outlined_simpler"
+        app:layout_constraintEnd_toStartOf="@id/txtPremiumContents"
+        app:layout_constraintStart_toStartOf="@id/txtSimplerWillMake"
+        app:layout_constraintTop_toTopOf="@id/txtPremiumContents"
+        app:tint="@color/blue_transparent" />
+
+    <TextView
+        android:id="@+id/txtPremiumContents"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_12dp"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/premium_contents_or_posts_"
+        android:textColor="@color/blue_transparent"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="@id/txtSimplerWillMake"
+        app:layout_constraintStart_toEndOf="@id/imgBulb1"
+        app:layout_constraintTop_toBottomOf="@id/txtSimplerWillMake" />
+
+    <ImageView
+        android:id="@+id/imgBulb2"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_outlined_simpler"
+        app:layout_constraintEnd_toStartOf="@id/txtITContentsWith"
+        app:layout_constraintStart_toStartOf="@id/txtSimplerWillMake"
+        app:layout_constraintTop_toTopOf="@id/txtITContentsWith"
+        app:tint="@color/blue_transparent" />
+
+    <TextView
+        android:id="@+id/txtITContentsWith"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_400"
+        android:text="@string/it_contents_with_"
+        android:textColor="@color/blue_transparent"
+        android:textSize="@dimen/_12sp"
+        app:layout_constraintEnd_toEndOf="@id/txtSimplerWillMake"
+        app:layout_constraintStart_toEndOf="@id/imgBulb2"
+        app:layout_constraintTop_toBottomOf="@id/txtPremiumContents" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card1months"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_72dp"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_28dp"
+        android:backgroundTint="@color/bg_secondary"
+        android:elevation="@dimen/_14dp"
+        app:cardCornerRadius="@dimen/_48dp"
+        app:layout_constraintBottom_toTopOf="@id/card3months"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtRegular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_26_5dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/regular"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt1month"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt1month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/_1_month"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txtRegular"
+                app:layout_constraintTop_toBottomOf="@id/txtRegular" />
+
+            <ImageView
+                android:id="@+id/imgArrowNext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_34_5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtMonthlyFor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_29dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/monthly_for"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt10000"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt10000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_29dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/idr_10_000"
+                android:textColor="@color/secondary"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext1"
+                app:layout_constraintTop_toBottomOf="@id/txtMonthlyFor1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card3months"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_72dp"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_28dp"
+        android:backgroundTint="@color/bg_secondary"
+        android:elevation="@dimen/_14dp"
+        app:cardCornerRadius="@dimen/_48dp"
+        app:layout_constraintBottom_toTopOf="@id/card6months"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtRecommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_26_5dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/recommended"
+                android:textColor="@color/secondary_color"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt3month"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt3month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/_3_month"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txtRecommended"
+                app:layout_constraintTop_toBottomOf="@id/txtRecommended" />
+
+            <ImageView
+                android:id="@+id/imgArrowNext2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_34_5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/txtMonthlyFor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_29dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/monthly_for"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt8000"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/txt8000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_29dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/idr_8_000"
+                android:textColor="@color/secondary"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext2"
+                app:layout_constraintTop_toBottomOf="@id/txtMonthlyFor2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card6months"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_72dp"
+        android:layout_marginHorizontal="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_70dp"
+        android:backgroundTint="@color/secondary"
+        android:elevation="@dimen/_14dp"
+        app:cardCornerRadius="@dimen/_48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtMostPopular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_26_5dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/most_popular"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt6month"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/txt6month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/_6_month"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/txtMostPopular"
+                app:layout_constraintTop_toBottomOf="@id/txtMostPopular" />
+
+            <ImageView
+                android:id="@+id/imgArrowNext3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_34_5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/bg_secondary"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/txtMonthlyFor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="29dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/monthly_for"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toTopOf="@id/txt5000"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext3"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"
+                tools:ignore="DuplicateIds" />
+
+            <TextView
+                android:id="@+id/txt5000"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_29dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/idr_5_000"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/imgArrowNext3"
+                app:layout_constraintTop_toBottomOf="@id/txtMonthlyFor3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

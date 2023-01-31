@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_transparent"
+    tools:context=".ui.simpler.SimplerPaymentUploadActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/toolbarPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/_21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgArrowBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_31dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/bg_secondary" />
+
+            <TextView
+                android:id="@+id/txtPayment"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13dp"
+                android:layout_marginEnd="@dimen/_66dp"
+                android:fontFamily="@font/poppins_700"
+                android:gravity="center"
+                android:text="@string/payment"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/imgArrowBack"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarPayment"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_24dp">
+
+            <TextView
+                android:id="@+id/txtManualBankTransfer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/manual_bank_transfer_instruction"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtForNow"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/for_now_we_only_provide_"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtManualBankTransfer" />
+
+            <TextView
+                android:id="@+id/txtTransferToThe"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/_1_transfer_to_the_following_bank_account_number_below"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtForNow" />
+
+            <TextView
+                android:id="@+id/textTransactionID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20dp"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/transaction_id"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTransferToThe" />
+
+            <TextView
+                android:id="@+id/txtTransactionID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_400"
+                android:text="@string/format_transaction_id"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintBottom_toBottomOf="@id/textTransactionID"
+                app:layout_constraintStart_toEndOf="@id/textTransactionID"
+                app:layout_constraintTop_toTopOf="@id/textTransactionID" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardManualBankTransfer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:backgroundTint="@color/bg_secondary"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTransactionID">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_16dp">
+
+                    <TextView
+                        android:id="@+id/txtMakeSureThat"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/make_sure_that_the_amount"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtBankName"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/bank_name"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtMakeSureThat" />
+
+                    <TextView
+                        android:id="@+id/txtBankAccountNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/bank_account_number"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/_24sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtBankName" />
+
+                    <TextView
+                        android:id="@+id/btnCopy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_4dp"
+                        android:background="@drawable/copy_outline"
+                        android:fontFamily="@font/poppins_600"
+                        android:paddingHorizontal="7.5dp"
+                        android:paddingVertical="@dimen/_2dp"
+                        android:text="@string/copy"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/txtBankAccountNumber"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/txtBankAccountNumber" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPleasePayAndConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:backgroundTint="@color/status_notify"
+                app:cardCornerRadius="@dimen/_8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardManualBankTransfer1">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imgExclamationMark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10dp"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_exclamation_mark"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtPleasePayAndConfirm"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="@dimen/_8dp"
+                        android:layout_marginStart="@dimen/_10dp"
+                        android:layout_marginEnd="@dimen/_8dp"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/please_pay_and_confirm_"
+                        android:textColor="@color/bg_secondary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgExclamationMark"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txtManualBankTransfer2"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_32dp"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/save_your_transfer_receipt"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/_14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardPleasePayAndConfirm" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/dashed_outline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtManualBankTransfer2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutImageNotUploaded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_18dp">
+
+                    <ImageView
+                        android:id="@+id/imgAddImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/cloud_upload"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/txtClickHere"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtClickHere"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/click_here_to_add_image"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/imgAddImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtMaxFileSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/max_file_size_5_mb"
+                        android:textColor="@color/secondary"
+                        android:textSize="@dimen/_12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/txtClickHere"
+                        app:layout_constraintTop_toBottomOf="@id/txtClickHere" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutImageUploaded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/_20dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imgPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_picture"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtFileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20dp"
+                        android:fontFamily="@font/poppins_600"
+                        android:text="@string/app_name"
+                        android:textColor="@color/primary"
+                        android:textSize="@dimen/_14sp"
+                        app:layout_constraintStart_toEndOf="@id/imgPicture"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtFileSize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_400"
+                        android:text="@string/_184_kb"
+                        android:textColor="@color/primary"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/txtFileName"
+                        app:layout_constraintTop_toBottomOf="@id/txtFileName" />
+
+                    <ImageView
+                        android:id="@+id/imgCrossmark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_cross_mark"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNextPayment"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40dp"
+                android:layout_marginBottom="@dimen/_48dp"
+                android:backgroundTint="@color/login_button_selector"
+                android:enabled="false"
+                android:fontFamily="@font/poppins_600"
+                android:text="@string/next"
+                android:textAllCaps="false"
+                android:textColor="@color/bg_secondary"
+                android:textSize="@dimen/_14sp"
+                app:cornerRadius="@dimen/_8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutImage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_transparent"
+    tools:context=".ui.homepage.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_color"
+        android:gravity="center"
+        android:paddingVertical="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_logo_home" />
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLogo">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollAtHome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toBottomOf="@id/linearLogo">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="@string/search"
+                    android:textAlignment="textStart"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="@dimen/_14sp"
+                    app:elevation="@dimen/_0dp"
+                    app:icon="@drawable/ic_search"
+                    app:iconTint="@color/text_secondary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@android:color/transparent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="@dimen/_12dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toBottomOf="@id/btnSearch">
+
+                    <TextView
+                        android:id="@+id/txtPosts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/posts"
+                        android:textColor="@color/primary_color"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toStartOf="@id/btnFilter"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/primary_color"
+                        android:contentDescription="@string/app_name"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="@string/filter"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sp"
+                        app:cornerRadius="@dimen/_5dp"
+                        app:icon="@drawable/ic_filter_post"
+                        app:iconTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@id/txtPosts"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtPosts"
+                        app:layout_constraintTop_toTopOf="@id/txtPosts" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintSuggestPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/rounded_top"
+                    android:backgroundTint="@color/white"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/constraintFilter">
+
+                    <TextView
+                        android:id="@+id/txtSuggestedPeople"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_13dp"
+                        android:layout_marginTop="@dimen/_13dp"
+                        android:layout_marginBottom="21dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/suggested_people"
+                        android:textColor="@color/primary_color"
+                        android:textSize="@dimen/_18sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/imgBtnClose"
+                        app:layout_constraintHorizontal_chainStyle="spread_inside"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageButton
+                        android:id="@+id/imgBtnClose"
+                        android:layout_width="@dimen/_12dp"
+                        android:layout_height="@dimen/_12dp"
+                        android:layout_marginEnd="19dp"
+                        android:background="@color/white"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_x_stroke"
+                        app:layout_constraintBottom_toBottomOf="@id/txtSuggestedPeople"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/txtSuggestedPeople"
+                        app:layout_constraintTop_toTopOf="@id/txtSuggestedPeople" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerSuggestedPeople"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:background="@drawable/rounded_bottom"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/constraintSuggestPeople"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_suggested_people" />
+
+                <ImageView
+                    android:id="@+id/imgHaveNoPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_0dp"
+                    android:layout_marginHorizontal="@dimen/_24dp"
+                    android:layout_marginTop="28dp"
+                    android:contentDescription="@string/app_name"
+                    android:paddingBottom="@dimen/_60dp"
+                    android:src="@drawable/img_have_no_post"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerSuggestedPeople" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPost"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_0dp"
+                    android:layout_marginTop="20dp"
+                    android:paddingBottom="@dimen/_60dp"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerSuggestedPeople"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_posts_at_home" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/btnAddPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="90dp"
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="@color/primary_color"
+        app:icon="@drawable/ic_plus_stroke"
+        app:iconTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

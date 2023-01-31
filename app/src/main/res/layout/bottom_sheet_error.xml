@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetError"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtSomething"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20dp"
+            android:layout_marginTop="@dimen/_40dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/something_went_wrong"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@id/imgSupport"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtMoment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/try_to_reload_by_swiping_down_the_page"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/imgSupport"
+            app:layout_constraintStart_toStartOf="@id/txtSomething"
+            app:layout_constraintTop_toBottomOf="@id/txtSomething" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOkay"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_48dp"
+            android:layout_marginBottom="@dimen/_42dp"
+            android:backgroundTint="@color/primary_color"
+            android:fontFamily="@font/poppins"
+            android:text="@string/okay"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sp"
+            app:cornerRadius="@dimen/_8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/imgSupport"
+            app:layout_constraintStart_toStartOf="@id/txtSomething"
+            app:layout_constraintTop_toBottomOf="@id/txtMoment" />
+
+        <ImageView
+            android:id="@+id/imgSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_21dp"
+            android:layout_marginBottom="@dimen/_21dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/img_support"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

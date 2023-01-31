@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetTagPost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/icRectangle"
+            android:layout_width="@dimen/_48dp"
+            android:layout_height="@dimen/_4dp"
+            android:layout_marginTop="@dimen/_12dp"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/rounded_dialog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/topics"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icRectangle" />
+
+        <TextView
+            android:id="@+id/txtChooseTopics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="@string/choose_topics_that_match_your_post"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintStart_toStartOf="@id/txtTopics"
+            app:layout_constraintTop_toBottomOf="@id/txtTopics" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipTagPost"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginVertical="@dimen/_31dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtChooseTopics">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/ui_ux"
+                app:chipIcon="@drawable/chip_icon_states" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/android"
+                app:chipIcon="@drawable/chip_icon_states" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/quality_assurance"
+                app:chipIcon="@drawable/chip_icon_states" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/back_end"
+                app:chipIcon="@drawable/chip_icon_states" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.Chip.Tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layoutDirection="rtl"
+                android:text="@string/front_end"
+                app:chipIcon="@drawable/chip_icon_states" />
+
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
