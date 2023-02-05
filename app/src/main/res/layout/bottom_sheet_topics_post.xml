@@ -58,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layoutDirection="rtl"
-                android:text="@string/ui_ux"
+                android:text="@string/mobile_legend"
                 app:chipIcon="@drawable/chip_icon_states" />
 
             <com.google.android.material.chip.Chip
@@ -74,7 +74,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layoutDirection="rtl"
-                android:text="@string/quality_assurance"
+                android:text="@string/aov"
                 app:chipIcon="@drawable/chip_icon_states" />
 
             <com.google.android.material.chip.Chip
@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layoutDirection="rtl"
-                android:text="@string/back_end"
+                android:text="@string/free_fire"
                 app:chipIcon="@drawable/chip_icon_states" />
 
             <com.google.android.material.chip.Chip
@@ -90,7 +90,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layoutDirection="rtl"
-                android:text="@string/front_end"
+                android:text="@string/pubgm"
                 app:chipIcon="@drawable/chip_icon_states" />
 
 

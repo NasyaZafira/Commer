@@ -57,7 +57,7 @@
                 style="@style/Widget.App.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ui_ux" />
+                android:text="@string/mobile_legend" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.App.Chip"
@@ -69,19 +69,19 @@
                 style="@style/Widget.App.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/quality_assurance" />
+                android:text="@string/aov" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.App.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/back_end" />
+                android:text="@string/free_fire" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Widget.App.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/front_end" />
+                android:text="@string/pubgm" />
 
 
         </com.google.android.material.chip.ChipGroup>
@@ -100,7 +100,7 @@
                 style="@style/Simpler.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/ui_ux" />
+                android:text="@string/mobile_legend" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Simpler.Chip"
@@ -112,19 +112,19 @@
                 style="@style/Simpler.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/quality_assurance" />
+                android:text="@string/aov" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Simpler.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/back_end" />
+                android:text="@string/free_fire" />
 
             <com.google.android.material.chip.Chip
                 style="@style/Simpler.Chip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/front_end" />
+                android:text="@string/pubgm" />
 
 
         </com.google.android.material.chip.ChipGroup>
