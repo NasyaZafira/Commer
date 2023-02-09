@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="@dimen/_4dp"
                         android:checkable="false"
-                        android:text="@string/front_end"
+                        android:text="@string/pubgm"
                         android:textAppearance="@style/TextAppearance.Body.Chip"
                         android:textColor="@color/white"
                         android:visibility="gone"

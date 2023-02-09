@@ -294,7 +294,7 @@
                         android:fontFamily="@font/poppins_600"
                         android:text="@string/click_here_to_add_image"
                         android:textColor="@color/secondary"
-                        android:textSize="@dimen/_14sp"
+                        android:textSize="13sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/imgAddImage"
                         app:layout_constraintTop_toTopOf="parent" />
