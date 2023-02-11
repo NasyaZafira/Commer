@@ -8,11 +8,11 @@
     tools:context=".ui.main.SplashActivity">
 
     <ImageView
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="@dimen/_0dp"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
         android:layout_marginHorizontal="@dimen/_110dp"
         android:layout_marginVertical="@dimen/_316dp"
-        android:src="@drawable/commit_logo_light"
+        android:src="@drawable/logo_splash_screen_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -9,10 +9,10 @@
     <ImageView
         android:id="@+id/imgWelcomePage"
         android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="270dp"
         android:layout_margin="@dimen/_40dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/welcome_page_3"
+        android:src="@drawable/pic_three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
