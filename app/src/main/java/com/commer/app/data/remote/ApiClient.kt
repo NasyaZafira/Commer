@@ -15,7 +15,7 @@ class ApiClient @Inject constructor(
     fun instance(): ApiService {
         val retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("https://commitapps.herokuapp.com/api/")
+            .baseUrl("http://dev.commer.cloud/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
             .build()
