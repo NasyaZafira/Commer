@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:background="@color/primary_color"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/img_logo_home"
+            android:src="@drawable/logo_commer"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -180,12 +180,22 @@
                 <ImageView
                     android:id="@+id/imgHaveNoPost"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_0dp"
+                    android:layout_height="400dp"
                     android:layout_marginHorizontal="@dimen/_24dp"
-                    android:layout_marginTop="28dp"
                     android:contentDescription="@string/app_name"
                     android:paddingBottom="@dimen/_60dp"
-                    android:src="@drawable/img_have_no_post"
+                    android:src="@drawable/home_commer"
+                    app:layout_constraintTop_toBottomOf="@id/txtImgHome" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtImgHome"
+                    android:text="Anda belum memiliki postingan beranda\nTemukan temanmu untuk memulai perjalanan !"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:textColor="@color/navy"
+                    android:layout_marginTop="35dp"
                     app:layout_constraintTop_toBottomOf="@id/recyclerSuggestedPeople" />
 
                 <androidx.recyclerview.widget.RecyclerView

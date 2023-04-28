@@ -58,13 +58,13 @@
 
         <ImageView
             android:id="@+id/imgSupport"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
             android:layout_marginStart="@dimen/_10dp"
             android:layout_marginTop="@dimen/_21dp"
             android:layout_marginBottom="@dimen/_21dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/img_support"
+            android:src="@drawable/error_commer"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

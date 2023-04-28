@@ -12,7 +12,7 @@
         android:layout_height="270dp"
         android:layout_margin="@dimen/_40dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/pic_three"
+        android:src="@drawable/thrid_pager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

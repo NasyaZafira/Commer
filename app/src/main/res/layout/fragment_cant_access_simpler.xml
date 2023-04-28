@@ -55,10 +55,10 @@
             <ImageView
                 android:id="@+id/imgCantAccessSimpler"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_height="350dp"
                 android:layout_marginTop="52dp"
                 android:contentDescription="@string/app_name"
-                android:src="@drawable/cant_access_simpler"
+                android:src="@drawable/simpler_error"
                 app:layout_constraintDimensionRatio="1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

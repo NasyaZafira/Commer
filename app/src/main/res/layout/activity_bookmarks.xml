@@ -85,10 +85,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:contentDescription="@string/transaction_history"
-            android:src="@drawable/welcome_page_1" />
+            android:src="@drawable/bookmark_commer" />
 
         <TextView
             style="@style/Transaction.Text.Title"
