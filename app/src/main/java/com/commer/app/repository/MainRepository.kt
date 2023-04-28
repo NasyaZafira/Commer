@@ -22,6 +22,63 @@ class MainRepository @Inject constructor(
     private val ioDispatcher: CoroutineDispatcher
 ) {
 
+    suspend fun buyProduct(
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
+        onError: (String?) -> Unit,
+        id : Int
+    ) = flow {
+        val response = apiService.buyProduct(id)
+        response.suspendOnSuccess {
+            emit(this.data)
+        }.onError {
+            Timber.e(this.message())
+            onError(this.statusCode.name)
+        }.onException {
+            Timber.e(this.message)
+        }
+    }
+        .onStart { onStart() }
+        .onCompletion { onComplete() }
+        .flowOn(ioDispatcher)
+    suspend fun getDetail(
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
+        onError: (String?) -> Unit,
+        id : Int
+    ) = flow {
+        val response = apiService.detailProduct(id)
+        response.suspendOnSuccess {
+            emit(this.data)
+        }.onError {
+            Timber.e(this.message())
+            onError(this.statusCode.name)
+        }.onException {
+            Timber.e(this.message)
+        }
+    }
+        .onStart { onStart() }
+        .onCompletion { onComplete() }
+        .flowOn(ioDispatcher)
+    suspend fun listProduct(
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
+        onError: (String?) -> Unit,
+    ) = flow {
+        val response = apiService.listProduct()
+        response.suspendOnSuccess {
+            emit(this.data)
+        }.onError {
+            Timber.e(this.message())
+            onError(this.statusCode.name)
+        }.onException {
+            Timber.e(this.message)
+        }
+    }
+        .onStart { onStart() }
+        .onCompletion { onComplete() }
+        .flowOn(ioDispatcher)
+
     suspend fun postSignUpAndGetResult(
         onStart: () -> Unit,
         onComplete: () -> Unit,

@@ -11,14 +11,23 @@
     <application
         android:name="com.commer.app.CommerApp"
         android:allowBackup="true"
-        android:icon="@mipmap/new_commer"
+        android:icon="@mipmap/commer_white"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@mipmap/new_commer_round"
+        android:roundIcon="@mipmap/commer_white_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Commit">
+        android:theme="@style/Theme.Commit"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.shop.BuyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.shop.DetailShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.shop.ShopActivity"
+            android:exported="false" />
         <activity
             android:name="com.commer.app.ui.simpler.SimplerPaymentSuccessActivity"
             android:exported="false"

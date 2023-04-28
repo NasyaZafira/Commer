@@ -20,6 +20,9 @@ import com.commer.app.data.model.remote.report.post.ReportPostResponse
 import com.commer.app.data.model.remote.search.getusers.GetAllUsersResponse
 import com.commer.app.data.model.remote.settings.account.UpdateAccountBody
 import com.commer.app.data.model.remote.settings.transaction.SimplerTransactionResponse
+import com.commer.app.data.model.remote.shop.ListShopResponse
+import com.commer.app.data.model.remote.shop.buy.BuyResponse
+import com.commer.app.data.model.remote.shop.detail.DetailShopResponse
 import com.commer.app.data.model.remote.signup.SignUpBody
 import com.commer.app.data.model.remote.signup.SignUpResponse
 import com.commer.app.data.model.remote.simpler.CheckPaymentResponse
@@ -230,4 +233,16 @@ interface ApiService {
     @GET("check/payment")
     suspend fun getPaymentStatus(): ApiResponse<CheckPaymentResponse>
 
+    @GET("product")
+    suspend fun listProduct() : ApiResponse<ListShopResponse>
+
+    @GET("product/{id}")
+    suspend fun detailProduct(
+        @Path("id") id: Int
+    ) : ApiResponse<DetailShopResponse>
+
+    @GET("product/buy/{id}")
+    suspend fun buyProduct(
+        @Path("id") id: Int
+    ) : ApiResponse<BuyResponse>
 }

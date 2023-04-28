@@ -27,6 +27,7 @@ import com.commer.app.ui.post.newpost.NewPostActivity
 import com.commer.app.ui.profile.other.ProfileOtherActivity
 import com.commer.app.ui.report.ReportActivity
 import com.commer.app.ui.search.SearchActivity
+import com.commer.app.ui.shop.ShopActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.launch
 import java.lang.reflect.Method
@@ -135,6 +136,10 @@ class HomeFragment : Fragment() {
 
         binding.btnAddPost.setOnClickListener {
             val i = Intent(requireContext(), NewPostActivity::class.java)
+            startActivity(i)
+        }
+        binding.btnShop.setOnClickListener {
+            val i = Intent(requireContext(), ShopActivity::class.java)
             startActivity(i)
         }
 

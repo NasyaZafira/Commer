@@ -23,4 +23,5 @@
 
     <color name="bg_primary">#E2EFFF</color>
     <color name="bg_secondary">#FFFFFF</color>
+    <color name="black01">#99000000</color>
 </resources>
