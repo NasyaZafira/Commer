@@ -27,8 +27,8 @@ class HomeViewModel @Inject constructor(
         mainRepository.getAllPosts(
             onStart = { _loading.postValue(true) },
             onComplete = { _loading.postValue(false) },
-            onError = { },
-            onException = { },
+            onError = { _message.postValue(it)},
+            onException = {_errorMessage.postValue(true) },
             statusCode = { _statusCode.postValue(it) },
             tags
         ).collect {

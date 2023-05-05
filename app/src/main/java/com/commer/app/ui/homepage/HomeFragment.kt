@@ -3,6 +3,7 @@ package com.commer.app.ui.homepage
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -168,20 +169,24 @@ class HomeFragment : Fragment() {
 
     private fun setupObserver() {
         viewModel.errorMessage.observe(viewLifecycleOwner) {
+            Log.e("TAG", "setupObserver Error: "+ it )
             if (it) BottomSheetError().show(parentFragmentManager, "ExceptionAtHomeFragment")
         }
         viewModel.statusCode.observe(viewLifecycleOwner) {
             if (it != 200) {
                 binding.constraintFilter.visibility = View.VISIBLE
                 binding.imgHaveNoPost.visibility = View.VISIBLE
+                binding.txtImgHome.visibility = View.VISIBLE
                 binding.recyclerPost.visibility = View.INVISIBLE
             }
         }
         viewModel.postResponse.observe(viewLifecycleOwner) { response ->
+            Log.e("TAG", "POST: "+ response )
             when (response.data.isNotEmpty()) {
                 true -> {
                     binding.constraintFilter.visibility = View.VISIBLE
                     binding.imgHaveNoPost.visibility = View.INVISIBLE
+                    binding.txtImgHome.visibility = View.INVISIBLE
                     binding.recyclerPost.visibility = View.VISIBLE
                     binding.recyclerPost.apply {
                         layoutManager = LinearLayoutManager(
@@ -197,6 +202,7 @@ class HomeFragment : Fragment() {
                 false -> {
                     binding.constraintFilter.visibility = View.GONE
                     binding.imgHaveNoPost.visibility = View.VISIBLE
+                    binding.txtImgHome.visibility = View.VISIBLE
                     binding.recyclerPost.visibility = View.INVISIBLE
                 }
             }
@@ -284,6 +290,7 @@ class HomeFragment : Fragment() {
                     if (allResponse.size == 0) {
                         binding.constraintFilter.visibility = View.VISIBLE
                         binding.imgHaveNoPost.visibility = View.VISIBLE
+                        binding.txtImgHome.visibility = View.VISIBLE
                         binding.recyclerPost.visibility = View.GONE
                     }
                 }

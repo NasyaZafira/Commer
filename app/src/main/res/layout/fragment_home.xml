@@ -131,7 +131,7 @@
                     android:layout_marginTop="16dp"
                     android:background="@drawable/rounded_top"
                     android:backgroundTint="@color/white"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     app:layout_constraintTop_toBottomOf="@id/constraintFilter">
 
                     <TextView
@@ -184,8 +184,9 @@
                     android:layout_marginHorizontal="@dimen/_24dp"
                     android:contentDescription="@string/app_name"
                     android:paddingBottom="@dimen/_60dp"
+                    android:layout_marginTop="@dimen/_20dp"
                     android:src="@drawable/home_commer"
-                    app:layout_constraintTop_toBottomOf="@id/txtImgHome" />
+                    app:layout_constraintTop_toBottomOf="@id/recyclerSuggestedPeople" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -206,6 +207,7 @@
                     android:paddingBottom="@dimen/_60dp"
                     app:layout_constraintTop_toBottomOf="@id/recyclerSuggestedPeople"
                     tools:itemCount="1"
+                    android:visibility="gone"
                     tools:listitem="@layout/item_posts_at_home" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
