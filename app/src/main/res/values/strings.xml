@@ -5,10 +5,10 @@
     <string name="welcomeTitle1">Selamat Datang di Commer</string>
     <string name="welcomeDesc1">Commer menghadirkan platform komunitas bagi Anda untuk belajar atau berbagi hal-hal baru seputar game.</string>
     <string name="welcomeTitle2">Sempurnakan penggunaan dari Commer</string>
-    <string name="welcomeDesc2"><font color="#00229B"><b>Berlangganan</b></font> akan menyempurnakan pengalaman Anda. Memberi Anda keuntungan premium dengan persyaratan umum untuk membantu memahami lebih mudah dari aplikasi Commer.</string>
+    <string name="welcomeDesc2"><font color="#00229B"><b>Berlangganan</b></font> akan menyempurnakan pengalaman Anda dengan akun verifikasi yang optimal. Layanan ini akan memberikan kenyamanan bagi pengguna untuk berinteraksi dan mendapatkan informasi yang akurat dari orang-orang terpercaya oleh Commer.</string>
     <string name="welcomeTitle3">Ini kesempatan untukmu !</string>
     <string name="log_in">Masuk</string>
-    <string name="welcomeDesc3">Tidak hanya berbagi &amp; belajar, dengan <font color="#00229B"><b>Commer</b></font>, saatnya terhubung dengan orang-orang sesuai bidang game!</string>
+    <string name="welcomeDesc3">Tidak hanya berbagi informasi, dengan <font color="#00229B"><b>Commer</b></font> kini tersedia TOKO COMMER yang menyedikan kebutuhan akun game Anda.</string>
     <string name="sign_up">Daftar</string>
     <string name="skip">Lewati</string>
     <string name="next">Lanjut</string>
@@ -178,13 +178,13 @@
     <string name="regular">Reguler</string>
     <string name="_1_month">1 BULAN</string>
     <string name="monthly_for">Harga</string>
-    <string name="idr_10_000">IDR 5.000</string>
+    <string name="idr_10_000">IDR 10.000</string>
     <string name="recommended">Rekomendasi</string>
     <string name="_3_month">3 BULAN</string>
     <string name="idr_8_000">IDR 8.000</string>
     <string name="most_popular">Paling Populer</string>
     <string name="_6_month">6 BULAN</string>
-    <string name="idr_5_000">IDR 10.000</string>
+    <string name="idr_5_000">IDR 5.000</string>
     <string name="per_month">/bulan</string>
     <string name="please_wait_a_moment">Silakan tunggu beberapa saat</string>
     <string name="we_re_checking_your_payment">Kami sedang memeriksa pembayaran Anda</string>
@@ -236,7 +236,7 @@
     <string name="what_do_i_get_as_a_verified_user">Apa yang saya dapatkan sebagai pengguna Terverifikasi?</string>
     <string name="as_soon_as_you_are_registered_as_a_verified_user">Segera setelah Anda terdaftar sebagai pengguna Terverifikasi, Anda akan mendapatkan konten Premium di COMMER dan dapat melakukan jual beli akun game.</string>
     <string name="how_to_verify_my_account">Bagaimana cara memverifikasi akun saya?</string>
-    <string name="field_how_to_verify_my_account">1. Pastikan jumlah pengikut Anda telah mencapai atau melebihi 20 pengikut.\n2. Siapkan scan Kartu ID Anda.\n3. Kirimkan email tersebut ke alamat email kami yang tertera di Kontak Kami, dengan subjek email “Verifikasi Akun” dan informasi berikut sebagai nama akun, nama bank, dan nomor akun Anda.\n4. Lampirkan scan Kartu ID Anda untuk verifikasi.\n5. Harap bersabar menunggu sampai informasi lebih lanjut dalam waktu 2-5 hari kerja.</string>
+    <string name="field_how_to_verify_my_account">1. Pastikan jumlah pengikut Anda telah mencapai atau melebihi 10 pengikut.\n2. Siapkan scan Kartu ID Anda.\n3. Kirimkan email tersebut ke alamat email kami yang tertera di Kontak Kami, dengan subjek email “Verifikasi Akun” dan informasi berikut sebagai nama akun, nama bank, dan nomor akun Anda.\n4. Lampirkan scan Kartu ID Anda untuk verifikasi.\n5. Harap bersabar menunggu sampai informasi lebih lanjut dalam waktu 2-5 hari kerja.</string>
     <string name="logout">Keluar ?</string>
     <string name="you_have_to_log_in_into_your_account_again">Anda harus masuk ke dalam akunmu lagi. Anda yakin ingin logout?</string>
     <string name="you_can_t_change_your_email">Anda tidak dapat mengubah email Anda.</string>
@@ -258,4 +258,12 @@
     <string name="create_new_transaction">Buat transaksi baru</string>
     <string name="re_log_in_to_access_simpler">Masuk kembali untuk akses fitur berlangganan</string>
     <string name="clear_all_media">Hapus semua media</string>
+    <string name="what_is_toko">Apa itu fitur toko?</string>
+    <string name="toko_feature">Fitur toko merupakan tempat bagi pengguna untuk melakukan kegiatan pembelian produk berupa akun dari berbagai game yang telah disediakan oleh admin toko Commer.</string>
+    <string name="how_to_buy">Bagaimana cara membeli produk di toko Commer?</string>
+    <string name="step_buy">1. Kunjungi toko Commer dengan ketuk icon keranjang di pojok kanan atas pada halaman beranda.\n2. Cari dan pilih produk yang Anda butuhkan.\n3. Ketuk produk dan baca detail informasi yang tersedia pada halaman detail produk yang Anda pilih.\n4. Apabila telah sesuai yang Anda butuhkan, ketuk "Beli sekarang".\n5. Lakukan pembayaran sesuai arahan yang sudah tertera pada halaman tersebut.\n6. Tunggu dalam 2x24 jam hingga admin toko menghubungi kontak yang tertera pada infomasi biodata akun Commer Anda.</string>
+    <string name="can_user_sell_product">Apakah saya bisa menjual produk di toko Commer?</string>
+    <string name="user_can_sell">Seluruh pengguna akun Commer dapat menjual produknya di toko Commer melalui kontak admin toko by Whatsapp +62 823–3842-5976 atau kunjungi tautan dibawah ini</string>
+    <string name="link_wa">https://bit.ly/41unJLx</string>
+    <string name="info_admin_shop">Baca panduan cara membeli produk di halaman <font color="#00229B"><b>Kontak Kami dan FAQ</b></font> pada Pengaturan\n\nPertanyaan atau info lebih lanjut hubungi admin\nby Whatsapp +62823-3842-5976</string>
 </resources>

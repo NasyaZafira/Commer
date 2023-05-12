@@ -42,14 +42,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="26dp"
-                    android:fontFamily="@font/poppins_semibold"
-                    android:text="Akun Mythic"
-                    android:textColor="@color/black"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:textSize="16sp"
                     android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/txtPrice"
@@ -58,7 +57,6 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     android:fontFamily="@font/poppins"
-                    android:text="IDR 4000"
                     android:textColor="@color/primary_color"
                     android:textSize="@dimen/_14sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +70,6 @@
                     android:layout_marginTop="14dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/poppins"
-                    android:text="Makanan khas Bandung yang cukup sering dipesan oleh anak muda dengan pola makan yang cukup tinggi dengan mengutamakan diet yang sehat dan teratur."
                     android:textColor="@color/secondary_color"
                     android:textSize="@dimen/_14sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -93,28 +90,17 @@
                     app:layout_constraintTop_toBottomOf="@+id/tvDesc" />
 
                 <TextView
-                    android:id="@+id/tvInfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/poppins"
-                    android:text="Seledri, telur, blueberry, madu."
-                    android:textColor="@color/secondary"
-                    android:textSize="@dimen/_14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pertanyaan atau info lebih lanjut hubungi admin\nby Whatsapp +62823-3842-5976"
-                    android:textColor="@color/black01"
-                    app:layout_constraintTop_toBottomOf="@id/tvInfo"
-                    android:fontFamily="@font/poppins"
-                    android:textSize="12sp"
                     android:id="@+id/contactAdmin"
-                    app:layout_constraintStart_toStartOf="@id/tvInfo"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/info_admin_shop"
+                    android:textColor="@color/black01"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="@id/tvDesc"
+                    app:layout_constraintStart_toStartOf="@id/tvDesc"
+                    app:layout_constraintTop_toBottomOf="@id/textView6" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -144,9 +130,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/_24dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="Beli sekarang"

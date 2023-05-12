@@ -117,7 +117,7 @@ class SettingsActivity : BaseActivity() {
         }
 
         binding.constraintPrivacyPolicy.setOnClickListener {
-            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://websitecommit.herokuapp.com/privacy"))
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.privacypolicygenerator.org/live.php?token=xqRLklazsEeat9iAMxjA0HjePxkuk2Pa"))
             startActivity(i)
         }
     }

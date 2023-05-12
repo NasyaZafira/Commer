@@ -2,6 +2,7 @@ package com.commer.app.ui.shop
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -60,6 +61,13 @@ class ShopActivity : BaseActivity() {
         viewModel.message.observe(this) {
             Toast.makeText(this, it, Toast.LENGTH_LONG).show()
         }
+        viewModel.statusCode.observe(this) {
+            if (it != 200) {
+                binding.imgHaveNoPost.visibility = View.VISIBLE
+                binding.txtImgHome.visibility = View.VISIBLE
+                binding.rvProductuser.visibility = View.INVISIBLE
+            }
+        }
 
         viewModel.loading.observe(this) {
             if (it) {
@@ -68,13 +76,25 @@ class ShopActivity : BaseActivity() {
                 hideLoading()
             }
         }
-        viewModel.listProduct.observe(this) {
-            adapterUsr.product.clear()
-            adapterUsr.product.addAll(it.data)
-            adapterUsr.notifyDataSetChanged()
-            binding.rvProductuser.apply {
-                layoutManager = GridLayoutManager(context, 2)
-                adapter = adapterUsr
+        viewModel.listProduct.observe(this) { response ->
+            when (response.data.isNotEmpty()) {
+                true -> {
+                    binding.imgHaveNoPost.visibility = View.INVISIBLE
+                    binding.txtImgHome.visibility = View.INVISIBLE
+                    binding.rvProductuser.visibility = View.VISIBLE
+                    adapterUsr.product.clear()
+                    adapterUsr.product.addAll(response.data)
+                    adapterUsr.notifyDataSetChanged()
+                    binding.rvProductuser.apply {
+                        layoutManager = GridLayoutManager(context, 2)
+                        adapter = adapterUsr
+                    }
+                }
+                false -> {
+                    binding.imgHaveNoPost.visibility = View.VISIBLE
+                    binding.txtImgHome.visibility = View.VISIBLE
+                    binding.rvProductuser.visibility = View.INVISIBLE
+                }
             }
         }
     }

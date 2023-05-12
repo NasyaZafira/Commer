@@ -1,5 +1,7 @@
 package com.commer.app.ui.settings.contact
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.commer.app.R
@@ -17,6 +19,12 @@ class ContactUsActivity : AppCompatActivity() {
 
         binding.imgBtnBack.setOnClickListener {
             onBackPressed()
+        }
+        binding.linkWa.setOnClickListener {
+            val url = "https://bit.ly/41unJLx"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
         }
 
     }

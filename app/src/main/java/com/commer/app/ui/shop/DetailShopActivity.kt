@@ -9,8 +9,10 @@ import com.bumptech.glide.Glide
 import com.commer.app.R
 import com.commer.app.base.BaseActivity
 import com.commer.app.data.model.remote.shop.buy.Data
+import com.commer.app.databinding.ActivityContactUsBinding
 import com.commer.app.databinding.ActivityDetailShopBinding
 import com.commer.app.ui.CustomLoadingDialog
+import com.commer.app.ui.settings.contact.ContactUsActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -29,6 +31,10 @@ class DetailShopActivity : BaseActivity() {
         runApi()
         binding.icBack.setOnClickListener {
             onBackPressed()
+        }
+        binding.contactAdmin.setOnClickListener {
+            val i = Intent(this, ContactUsActivity::class.java)
+            startActivity(i)
         }
     }
 

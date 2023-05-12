@@ -56,8 +56,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/_24dp"
                 android:layout_marginTop="@dimen/_32dp"
-                android:paddingBottom="52dp"
                 android:orientation="vertical"
+                android:paddingBottom="52dp"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
@@ -125,6 +125,56 @@
                     android:layout_marginTop="@dimen/_8dp"
                     android:text="@string/field_how_to_verify_my_account" />
 
+                <TextView
+                    style="@style/ContactUs.Text.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/what_is_toko" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/toko_feature" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/how_to_buy" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/step_buy" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="@string/can_user_sell_product" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="@string/user_can_sell" />
+
+                <TextView
+                    android:id="@+id/linkWa"
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2dp"
+                    android:text="@string/link_wa"
+                    android:textColor="@color/primary_color" />
             </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
