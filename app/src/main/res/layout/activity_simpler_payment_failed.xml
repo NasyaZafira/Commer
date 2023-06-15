@@ -67,6 +67,20 @@
             app:layout_constraintEnd_toEndOf="@id/lottiePaymentFailed"
             app:layout_constraintStart_toStartOf="@id/lottiePaymentFailed"
             app:layout_constraintTop_toBottomOf="@id/txtPaymentFailed" />
+        <TextView
+            android:id="@+id/txtBitly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8dp"
+            android:fontFamily="@font/poppins_400"
+            android:gravity="center"
+            android:text="@string/link_wa"
+            android:textColor="@color/primary_color"
+            android:textSize="@dimen/_12sp"
+            app:layout_constraintEnd_toEndOf="@id/lottiePaymentFailed"
+            app:layout_constraintStart_toStartOf="@id/lottiePaymentFailed"
+            app:layout_constraintTop_toBottomOf="@id/txtSorry" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCreateNewTransaction"

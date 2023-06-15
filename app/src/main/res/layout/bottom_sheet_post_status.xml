@@ -22,11 +22,12 @@
 
         <TextView
             android:id="@+id/txtWhoCanSeeYou"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/poppins_bold"
+            app:layout_constraintEnd_toEndOf="parent"
             android:text="@string/who_can_see_your_post"
             android:textColor="@color/text_primary"
             android:textSize="20sp"

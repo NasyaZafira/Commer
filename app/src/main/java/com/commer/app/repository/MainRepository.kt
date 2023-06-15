@@ -704,6 +704,28 @@ class MainRepository @Inject constructor(
         .onCompletion { onComplete() }
         .flowOn(ioDispatcher)
 
+    suspend fun getTransactionShop(
+        onStart: () -> Unit,
+        onComplete: () -> Unit,
+        onError: (String?) -> Unit,
+        statusCode: (code: Int) -> Unit
+    ) = flow {
+        val response = apiService.getHistoryShop()
+        response.suspendOnSuccess {
+            emit(this.data)
+            statusCode(this.statusCode.code)
+        }.onError {
+            Timber.e(this.message())
+            onError(this.statusCode.name)
+            statusCode(this.statusCode.code)
+        }.onException {
+            Timber.e(this.message)
+        }
+    }
+        .onStart { onStart() }
+        .onCompletion { onComplete() }
+        .flowOn(ioDispatcher)
+
     suspend fun reportUserAndGetResult(
         onStart: () -> Unit,
         onComplete: () -> Unit,

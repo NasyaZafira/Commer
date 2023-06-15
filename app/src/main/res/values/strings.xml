@@ -32,7 +32,7 @@
     <string name="create_your_new_account">Buat akun baru dan mulai berbagi hal hal baru !</string>
     <string name="password_must_be">Kata sandi harus minimal 6 karakter dan harus mengandung angka &#38; huruf.</string>
     <string name="something_wrong_email">Ada yang salah dengan alamat email, silakan periksa alamat email Anda lagi.</string>
-    <string name="something_wrong_phone">Ada yang salah dengan nomor telepon, pastikan nomor Anda dimulai dengan 0.</string>
+    <string name="something_wrong_phone">Ada yang salah dengan nomor telepon, pastikan nomor Anda dimulai dengan +62 / 62.</string>
     <string-array name="domicile">
         <item>ACEH</item>
         <item>BALI</item>
@@ -222,7 +222,7 @@
     <string name="subscribed">Berlangganan</string>
     <string name="account">Akun</string>
     <string name="bookmarks">Bookmarks</string>
-    <string name="transaction_history">Riwayat Transaksi</string>
+    <string name="transaction_history">Riwayat Transaksi Simpler</string>
     <string name="help">Bantuan</string>
     <string name="contact_us_and_faq">Kontak Kami &amp; FAQ</string>
     <string name="log_out">Keluar</string>
@@ -254,7 +254,7 @@
     <string name="max_file_size_5_mb">Ukuran file maks 5 mb</string>
     <string name="_184_kb">184 kb</string>
     <string name="payment_failed">Pembayaran gagal</string>
-    <string name="sorry_something_went_wrong_">Maaf, terjadi kesalahan\nTransaksimu gagal</string>
+    <string name="sorry_something_went_wrong_">Maaf, terjadi kesalahan\nTransaksimu gagal\nSilahkan hubungi admin pada link berikut</string>
     <string name="create_new_transaction">Buat transaksi baru</string>
     <string name="re_log_in_to_access_simpler">Masuk kembali untuk akses fitur berlangganan</string>
     <string name="clear_all_media">Hapus semua media</string>

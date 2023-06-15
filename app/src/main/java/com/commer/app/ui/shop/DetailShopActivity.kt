@@ -78,6 +78,7 @@ class DetailShopActivity : BaseActivity() {
                 val i = Intent(this, BuyActivity::class.java)
                 i.putExtra("product", response.data.id.toLong())
                 startActivity(i)
+                finish()
             }
         }
     }

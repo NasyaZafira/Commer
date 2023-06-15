@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue_transparent"
-    tools:context=".ui.settings.transactions.TransactionHistoryActivity">
+    tools:context=".ui.settings.shop.ShopHistoryActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintTxtTransaction"
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_bold"
-            android:text="@string/transaction_history"
+            android:text="Riwayat Transaksi Toko"
             android:textColor="@color/white"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="@id/imgBtnBack"
@@ -58,7 +58,7 @@
                 android:layout_height="@dimen/_0dp">
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerTransaction"
+                    android:id="@+id/recyclerTransactionShop"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20dp"
@@ -102,5 +102,6 @@
             android:textSize="@dimen/_20sp" />
 
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

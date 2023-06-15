@@ -4,16 +4,22 @@ import android.os.Bundle
 import android.view.*
 import androidx.core.content.ContextCompat
 import androidx.core.view.children
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.commer.app.R
 import com.commer.app.databinding.BottomSheetFilterPostBinding
-import com.commer.app.ui.simplerpost.SimplerPostsFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class BottomSheetFilterAtVerified : BottomSheetDialogFragment() {
 
     private var _binding: BottomSheetFilterPostBinding? = null
     private val binding get() = _binding!!
+    private val viewModel: VerifiedPostViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,7 +33,8 @@ class BottomSheetFilterAtVerified : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bgButton = ContextCompat.getColorStateList(requireContext(), R.color.button_at_simpler_post)
+        val bgButton =
+            ContextCompat.getColorStateList(requireContext(), R.color.button_at_simpler_post)
         binding.btnFilter.backgroundTintList = bgButton
 
         binding.chipFilterPost.visibility = View.INVISIBLE
@@ -39,12 +46,15 @@ class BottomSheetFilterAtVerified : BottomSheetDialogFragment() {
                 binding.btnFilter.isEnabled = it.isChecked && !chipText.isNullOrEmpty()
 
                 binding.btnFilter.setOnClickListener {
-                    (requireParentFragment() as SimplerPostsFragment?)?.getVerifiedPostFromFilter(chipText.toString())
+                    lifecycleScope.launch {
+                        viewModel.getVerifiedPostFromServer(chipText.toString())
+                    }
                     dialog?.dismiss()
                 }
             }
         }
     }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

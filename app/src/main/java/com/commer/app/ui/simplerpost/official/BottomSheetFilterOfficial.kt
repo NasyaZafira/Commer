@@ -6,7 +6,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.children
 import com.commer.app.R
 import com.commer.app.databinding.BottomSheetFilterPostBinding
-import com.commer.app.ui.simplerpost.SimplerPostsFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 
@@ -27,7 +26,8 @@ class BottomSheetFilterOfficial : BottomSheetDialogFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val bgButton = ContextCompat.getColorStateList(requireContext(), R.color.button_at_simpler_post)
+        val bgButton =
+            ContextCompat.getColorStateList(requireContext(), R.color.button_at_simpler_post)
         binding.btnFilter.backgroundTintList = bgButton
 
         binding.chipFilterPost.visibility = View.INVISIBLE
@@ -38,10 +38,10 @@ class BottomSheetFilterOfficial : BottomSheetDialogFragment() {
                 val chipText = it.text
                 binding.btnFilter.isEnabled = it.isChecked && !chipText.isNullOrEmpty()
 
-                binding.btnFilter.setOnClickListener {
-                    (requireParentFragment() as SimplerPostsFragment?)?.getOfficialPostFromFilter(chipText.toString())
-                    dialog?.dismiss()
-                }
+//                binding.btnFilter.setOnClickListener {
+//                    (requireParentFragment() as SimplerPostsFragment?)?.getOfficialPostFromFilter(chipText.toString())
+//                    dialog?.dismiss()
+//                }
             }
         }
     }

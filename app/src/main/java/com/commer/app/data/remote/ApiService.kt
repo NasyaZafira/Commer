@@ -23,6 +23,7 @@ import com.commer.app.data.model.remote.settings.transaction.SimplerTransactionR
 import com.commer.app.data.model.remote.shop.ListShopResponse
 import com.commer.app.data.model.remote.shop.buy.BuyResponse
 import com.commer.app.data.model.remote.shop.detail.DetailShopResponse
+import com.commer.app.data.model.remote.shop.history.HistoryShopResponse
 import com.commer.app.data.model.remote.signup.SignUpBody
 import com.commer.app.data.model.remote.signup.SignUpResponse
 import com.commer.app.data.model.remote.simpler.CheckPaymentResponse
@@ -206,6 +207,9 @@ interface ApiService {
     @GET("simpler/history")
     suspend fun getTransactionHistory(): ApiResponse<SimplerTransactionResponse>
 
+    //history shop
+    @GET("history")
+    suspend fun getHistoryShop() : ApiResponse<HistoryShopResponse>
     @POST("report/user/{idUser}")
     suspend fun postReportUser(
         @Path("idUser") idUser: Int,

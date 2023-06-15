@@ -2,10 +2,16 @@ package com.commer.app.ui.register
 
 import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Rect
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
+import android.view.MotionEvent
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -74,7 +80,8 @@ class SignUpFormActivity : AppCompatActivity() {
 
         if (checkContainEmail && checkContainPhoneNumber &&
             checkContainPassword && checkBoxTerms && checkContainFullName &&
-            checkContainDomicile && checkContainGender) {
+            checkContainDomicile && checkContainGender
+        ) {
             binding.btnNext.isEnabled = true
             binding.btnNext.setBackgroundColor(
                 ContextCompat.getColor(applicationContext, R.color.primary_color)
@@ -194,7 +201,7 @@ class SignUpFormActivity : AppCompatActivity() {
     private fun checkContainPhoneNumber(): String? {
         val phoneNumberText = binding.editPhoneNumber.text.toString()
         if (
-            !(phoneNumberText.matches("^([0])[0-9]{10,14}\$".toRegex()) && phoneNumberText.isNotEmpty())
+            !(phoneNumberText.matches("^(^\\+62|62)(\\d{3,4}-?){2}\\d{3,4}\$".toRegex()) && phoneNumberText.isNotEmpty())
         ) {
             return getString(R.string.something_wrong_phone).also {
                 binding.inputPhoneNumber.isEndIconVisible = false
@@ -397,5 +404,32 @@ class SignUpFormActivity : AppCompatActivity() {
                 isButtonEnabled()
             }
         }
+    }
+
+    override fun dispatchTouchEvent(ev: MotionEvent): Boolean {
+        if (ev.action == MotionEvent.ACTION_DOWN) {
+            val v = currentFocus
+            if (v is EditText) {
+                val outRect = Rect()
+                v.getGlobalVisibleRect(outRect)
+                if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) {
+                    Log.e("focus", "touchevent")
+                    v.clearFocus()
+                    val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
+                }
+            }
+            if (v is AutoCompleteTextView) {
+                val outRect = Rect()
+                v.getGlobalVisibleRect(outRect)
+                if (!outRect.contains(ev.rawX.toInt(), ev.rawY.toInt())) {
+                    Log.e("focus", "touchevent")
+                    v.clearFocus()
+                    val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    imm.hideSoftInputFromWindow(v.getWindowToken(), 0)
+                }
+            }
+        }
+        return super.dispatchTouchEvent(ev)
     }
 }

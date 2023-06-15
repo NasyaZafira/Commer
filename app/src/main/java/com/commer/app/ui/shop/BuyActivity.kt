@@ -1,5 +1,6 @@
 package com.commer.app.ui.shop
 
+import android.content.Intent
 import android.os.Bundle
 import android.webkit.WebViewClient
 import androidx.activity.viewModels
@@ -25,7 +26,9 @@ class BuyActivity : BaseActivity() {
         setContentView(binding.root)
 
         binding.icBack.setOnClickListener {
-            onBackPressed()
+            val i = Intent(this, ShopActivity::class.java)
+            startActivity(i)
+            finish()
         }
 
         getId()

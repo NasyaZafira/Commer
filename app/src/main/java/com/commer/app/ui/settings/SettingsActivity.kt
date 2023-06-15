@@ -18,6 +18,7 @@ import com.commer.app.ui.settings.account.UpdateAccountActivity
 import com.commer.app.ui.settings.bookmarks.BookmarksActivity
 import com.commer.app.ui.settings.contact.ContactUsActivity
 import com.commer.app.ui.settings.profile.UpdateProfileActivity
+import com.commer.app.ui.settings.shop.ShopHistoryActivity
 import com.commer.app.ui.settings.transactions.TransactionHistoryActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -108,6 +109,10 @@ class SettingsActivity : BaseActivity() {
 
         binding.constraintTransaction.setOnClickListener {
             val i = Intent(this, TransactionHistoryActivity::class.java)
+            startActivity(i)
+        }
+        binding.constraintTransactionShop.setOnClickListener {
+            val i = Intent(this, ShopHistoryActivity::class.java)
             startActivity(i)
         }
 

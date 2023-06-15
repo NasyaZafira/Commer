@@ -1,6 +1,7 @@
 package com.commer.app.ui.simpler
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -31,6 +32,12 @@ class SimplerPaymentFailedActivity : AppCompatActivity() {
 
         binding.btnReturnToHomepage.setOnClickListener {
             val i = Intent(this, MainActivity::class.java)
+            startActivity(i)
+        }
+        binding.txtBitly.setOnClickListener {
+            val url = "https://bit.ly/41unJLx"
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
             startActivity(i)
         }
     }

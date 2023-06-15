@@ -20,6 +20,9 @@
         android:theme="@style/Theme.Commit"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".ui.settings.shop.ShopHistoryActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.shop.BuyActivity"
             android:exported="false" />
         <activity
