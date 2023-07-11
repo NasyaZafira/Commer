@@ -67,4 +67,11 @@ class BuyActivity : BaseActivity() {
 
     }
 
+    override fun onBackPressed() {
+        super.onBackPressed()
+        val i = Intent(this, ShopActivity::class.java)
+        startActivity(i)
+        finish()
+    }
+
 }

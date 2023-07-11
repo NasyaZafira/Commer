@@ -35,10 +35,10 @@ class TransactionShopAdapter(
         holder.binding.txtSimpler.text = textTitle
         holder.binding.txtDate.text = response.date.toCustomDate()
         if (response.isPaid == true) {
-            holder.binding.txtStatusTransaction.text = "Telah Dibayar  " + response.amount
+            holder.binding.txtStatusTransaction.text = "Telah Dibayar " + response.amount
             holder.binding.txtStatusTransaction.setTextColor(successColor)
         } else if (response.isPaid == false){
-            holder.binding.txtStatusTransaction.text = "Gagal / Belum Bayar"
+            holder.binding.txtStatusTransaction.text = "Pembayaran Gagal"
             holder.binding.txtStatusTransaction.setTextColor(errorColor)
         }
     }

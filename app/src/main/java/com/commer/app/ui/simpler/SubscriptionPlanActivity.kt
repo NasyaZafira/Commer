@@ -22,11 +22,11 @@ class SubscriptionPlanActivity : AppCompatActivity() {
         binding.card1months.setOnClickListener {
             i.putExtra("xMonths", " 1 month")
             i.putExtra("months", "1")
-            i.putExtra("price", "IDR 5.000")
+            i.putExtra("price", "IDR 10.000")
             i.putExtra("simplerXMonthPlan", "Simpler 1 months plan")
-            i.putExtra("priceTimesMonths", "IDR 5.000 x 1 months")
+            i.putExtra("priceTimesMonths", "IDR 10.000 x 1 months")
             i.putExtra("forXMonths", "(For 1 months)")
-            i.putExtra("totalPrice", "IDR 5.000")
+            i.putExtra("totalPrice", "IDR 10.000")
             startActivity(i)
         }
 
@@ -44,11 +44,11 @@ class SubscriptionPlanActivity : AppCompatActivity() {
         binding.card6months.setOnClickListener {
             i.putExtra("xMonths", " 6 month")
             i.putExtra("months", "6")
-            i.putExtra("price", "IDR 10.000")
+            i.putExtra("price", "IDR 5.000")
             i.putExtra("simplerXMonthPlan", "Simpler 6 months plan")
-            i.putExtra("priceTimesMonths", "IDR 10.000 x 6 months")
+            i.putExtra("priceTimesMonths", "IDR 5.000 x 6 months")
             i.putExtra("forXMonths", "(For 6 months)")
-            i.putExtra("totalPrice", "IDR 60.000")
+            i.putExtra("totalPrice", "IDR 30.000")
             startActivity(i)
         }
     }

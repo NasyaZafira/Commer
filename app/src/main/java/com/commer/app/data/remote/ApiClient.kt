@@ -15,7 +15,7 @@ class ApiClient @Inject constructor(
     fun instance(): ApiService {
         val retrofit = Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("http://commer.cloud:8081/api/")
+            .baseUrl("http://103.84.207.9:8081/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
             .build()

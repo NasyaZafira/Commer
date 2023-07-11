@@ -44,6 +44,7 @@ class ShopActivity : BaseActivity() {
         val i = Intent(this, DetailShopActivity::class.java)
         i.putExtra("product", content.id.toLong())
         startActivity(i)
+        finish()
     }
 
 
@@ -97,5 +98,10 @@ class ShopActivity : BaseActivity() {
                 }
             }
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

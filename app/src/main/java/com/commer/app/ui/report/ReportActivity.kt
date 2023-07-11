@@ -38,7 +38,7 @@ class ReportActivity : BaseActivity() {
 
         binding.radioButtonReport.setOnCheckedChangeListener { _, checkedId ->
             val radio = findViewById<RadioButton>(checkedId)
-            if (radio.text == "Other") {
+            if (radio.text == "Lainnya") {
                 binding.inputOtherReport.visibility = View.VISIBLE
                 binding.constraintCounter.visibility = View.VISIBLE
                 binding.editOtherReport.doOnTextChanged { text, _, _, _ ->

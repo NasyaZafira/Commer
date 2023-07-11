@@ -141,8 +141,8 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="premium_contents_or_posts_">Konten atau postingan khusus dari <b>Commer</b> and <b>Pengguna berlangganan</b></string>
-    <string name="it_contents_with_">Sekumpulan pengguna terpercaya dan dapat melakukan jual beli akun game yang dihadirkan <b>Commer</b> untuk mempermudah dan mengurangi informasi palsu</string>
+    <string name="premium_contents_or_posts_">Konten atau postingan khusus dari <b>Commer</b> dan <b>Pengguna verified</b></string>
+    <string name="it_contents_with_">Sekumpulan pengguna terpercaya yang dihadirkan <b>Commer</b> untuk mempermudah dan mengurangi informasi palsu</string>
     <string name="simpler_x_months_plan_details">Berlangganan <b>X bulan</b> detail rincian</string>
     <string name="what_you_ll_get">Apa yang akan Anda dapatkan</string>
     <string name="change_plan">Ubah rencana</string>
@@ -233,10 +233,10 @@
     <string name="tech_commitapp_gmail_com">commerapp@gmail.com</string>
     <string name="faq">FAQ</string>
     <string name="frequently_asked_questions">Frequently Asked Questions</string>
-    <string name="what_do_i_get_as_a_verified_user">Apa yang saya dapatkan sebagai pengguna Terverifikasi?</string>
-    <string name="as_soon_as_you_are_registered_as_a_verified_user">Segera setelah Anda terdaftar sebagai pengguna Terverifikasi, Anda akan mendapatkan konten Premium di COMMER dan dapat melakukan jual beli akun game.</string>
+    <string name="what_do_i_get_as_a_verified_user">apa yang saya dapatkan sebagai pengguna Berlangganan? </string>
+    <string name="as_soon_as_you_are_registered_as_a_verified_user">Segera setelah Anda terdaftar sebagai pengguna Berlangganan, Anda akan mendapatkan konten Premium yang berisi informasi dari pengguna Terpercaya di COMMER..</string>
     <string name="how_to_verify_my_account">Bagaimana cara memverifikasi akun saya?</string>
-    <string name="field_how_to_verify_my_account">1. Pastikan jumlah pengikut Anda telah mencapai atau melebihi 10 pengikut.\n2. Siapkan scan Kartu ID Anda.\n3. Kirimkan email tersebut ke alamat email kami yang tertera di Kontak Kami, dengan subjek email “Verifikasi Akun” dan informasi berikut sebagai nama akun, nama bank, dan nomor akun Anda.\n4. Lampirkan scan Kartu ID Anda untuk verifikasi.\n5. Harap bersabar menunggu sampai informasi lebih lanjut dalam waktu 2-5 hari kerja.</string>
+    <string name="field_how_to_verify_my_account">1. Pastikan jumlah pengikut Anda telah mencapai atau melebihi 30 pengikut.\n2. Siapkan scan Kartu ID Anda.\n3. Kirimkan email tersebut ke alamat email kami yang tertera di Kontak Kami, dengan subjek email “Ajukan Verifikasi Akun Commer” dan informasi seperti, nama akun, domisili, nomor telepon, dan email.\n4. Lampirkan scan KTP Anda untuk verifikasi.\n5. Harap bersabar menunggu sampai informasi lebih lanjut dalam waktu 2-5 hari kerja.</string>
     <string name="logout">Keluar ?</string>
     <string name="you_have_to_log_in_into_your_account_again">Anda harus masuk ke dalam akunmu lagi. Anda yakin ingin logout?</string>
     <string name="you_can_t_change_your_email">Anda tidak dapat mengubah email Anda.</string>

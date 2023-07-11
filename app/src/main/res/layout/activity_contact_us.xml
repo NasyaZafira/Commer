@@ -115,6 +115,34 @@
                     style="@style/ContactUs.Text.Heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24dp"
+                    android:text="Bagaimana cara untuk berlangganan?" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="1. Buka pada halaman berlangganan\n2. Pilih jenis berlangganan sesuai kebutuhan Anda\n3. Lakukan pembayaran sesuai nominal yang tertera dan kirim bukti pembayaran\n4. Harap tunggu dalam waktu 1-2 hari kerja maka admin akan memverifikasi pembayaran Anda\n5. Jika admin telah memverifikasi maka Anda dapat menikmati akses berlangganan" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20dp"
+                    android:text="Apa yang saya dapatkan sebagai pengguna Terverifikasi? " />
+
+                <TextView
+                    style="@style/ContactUs.Text.Paragraph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8dp"
+                    android:text="Anda akan mendapatkan kebebasan akses pada setiap menu pada aplikasi COMMER dan akun Anda akan mendapatkan tanda sebagai akun terpercaya atau centang biru" />
+
+                <TextView
+                    style="@style/ContactUs.Text.Heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_20dp"
                     android:text="@string/how_to_verify_my_account" />
 
